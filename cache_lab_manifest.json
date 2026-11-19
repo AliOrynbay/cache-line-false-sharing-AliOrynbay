@@ -1,0 +1,157 @@
+{
+  "git_username": "AliOrynbay",
+  "instance_seed": 12256014976366901763,
+  "cpu_model": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+  "logical_cores": 12,
+  "cache_line_size": 64,
+  "pinned_cores": [],
+  "affinity_supported": false,
+  "num_threads": 4,
+  "iterations_per_thread": 60000000,
+  "repeats": 3,
+  "expected_final_counter_per_thread": [
+    150000000,
+    150000000,
+    150000000,
+    150000000
+  ],
+  "results": {
+    "stride_1": {
+      "stride_elements": 1,
+      "stride_bytes": 8,
+      "all_elapsed_ns": [
+        550948200,
+        569638400,
+        579248200
+      ],
+      "median_elapsed_ns": 569638400,
+      "min_elapsed_ns": 550948200,
+      "ns_per_update_per_thread": 9.493973333333333,
+      "ns_per_update_aggregate": 2.3734933333333332,
+      "voluntary_ctx_switches": null,
+      "involuntary_ctx_switches": null,
+      "final_counters": [
+        150000000,
+        150000000,
+        150000000,
+        150000000
+      ],
+      "parity_with_expected": true
+    },
+    "stride_4": {
+      "stride_elements": 4,
+      "stride_bytes": 32,
+      "all_elapsed_ns": [
+        193618800,
+        197973900,
+        240840400
+      ],
+      "median_elapsed_ns": 197973900,
+      "min_elapsed_ns": 193618800,
+      "ns_per_update_per_thread": 3.299565,
+      "ns_per_update_aggregate": 0.82489125,
+      "voluntary_ctx_switches": null,
+      "involuntary_ctx_switches": null,
+      "final_counters": [
+        150000000,
+        150000000,
+        150000000,
+        150000000
+      ],
+      "parity_with_expected": true
+    },
+    "stride_8": {
+      "stride_elements": 8,
+      "stride_bytes": 64,
+      "all_elapsed_ns": [
+        35668900,
+        43032800,
+        46669700
+      ],
+      "median_elapsed_ns": 43032800,
+      "min_elapsed_ns": 35668900,
+      "ns_per_update_per_thread": 0.7172133333333334,
+      "ns_per_update_aggregate": 0.17930333333333334,
+      "voluntary_ctx_switches": null,
+      "involuntary_ctx_switches": null,
+      "final_counters": [
+        150000000,
+        150000000,
+        150000000,
+        150000000
+      ],
+      "parity_with_expected": true
+    },
+    "stride_16": {
+      "stride_elements": 16,
+      "stride_bytes": 128,
+      "all_elapsed_ns": [
+        34890600,
+        35106800,
+        41904700
+      ],
+      "median_elapsed_ns": 35106800,
+      "min_elapsed_ns": 34890600,
+      "ns_per_update_per_thread": 0.5851133333333334,
+      "ns_per_update_aggregate": 0.14627833333333334,
+      "voluntary_ctx_switches": null,
+      "involuntary_ctx_switches": null,
+      "final_counters": [
+        150000000,
+        150000000,
+        150000000,
+        150000000
+      ],
+      "parity_with_expected": true
+    },
+    "private": {
+      "stride_elements": 1,
+      "stride_bytes": 8,
+      "all_elapsed_ns": [
+        3732300,
+        3784700,
+        3820200
+      ],
+      "median_elapsed_ns": 3784700,
+      "min_elapsed_ns": 3732300,
+      "ns_per_update_per_thread": 0.06307833333333333,
+      "ns_per_update_aggregate": 0.015769583333333333,
+      "voluntary_ctx_switches": null,
+      "involuntary_ctx_switches": null,
+      "final_counters": [
+        150000000,
+        150000000,
+        150000000,
+        150000000
+      ],
+      "parity_with_expected": true
+    }
+  },
+  "slowdown_stride1_vs_stride8": 13.237307356249186,
+  "false_sharing_observed": true,
+  "gil_experiment": {
+    "numba_nogil_1_thread_ns": 12712400,
+    "numba_nogil_4_threads_ns": 132175000,
+    "numba_gil_held_1_thread_ns": 13904200,
+    "numba_gil_held_4_threads_ns": 50655000,
+    "python_bytecode_1_thread_ns": 58010500,
+    "python_bytecode_4_threads_ns": 237431400,
+    "numba_iters_per_thread": 20000000,
+    "python_iters_per_thread": 1000000
+  },
+  "llvm_audit": {
+    "nopython_compiled": true,
+    "store_i64_count": 5,
+    "load_i64_count": 7,
+    "atomic_or_volatile_store_count": 0,
+    "python_object_marker_count": 4,
+    "gil_release_calls_in_wrapper": 2,
+    "private_kernel_store_i64_count": 1,
+    "llvm_ok": true,
+    "parity_all_layouts_equal": true,
+    "parity_matches_closed_form": true,
+    "parity_all_repeats_match_expected": true
+  },
+  "smoke_run": false,
+  "verification_passed": true
+}
